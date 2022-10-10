@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: unitech-app
+  datasource:
+    url: jdbc:postgresql://${UNITECH_DB_HOST:localhost}:${UNITECH_DB_PORT:5434}/${UNITECH_DB_NAME:unitech_db}
+    username: ${UNITECH_DB_USERNAME:postgres}
+    password: ${UNITECH_DB_PASSWORD:postgres123}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
